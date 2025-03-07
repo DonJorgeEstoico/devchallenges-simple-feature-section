@@ -1,0 +1,118 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+/*------------------------------FONTS------------------------------*/
+/*
+Thin            100     
+Extra Light     200
+Light           300
+Regular         400
+Medium          500
+Semi-Bold       600
+Bold            700
+Extra-Bold      800
+Black           900
+*/
+.outfit-font {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+}
+
+.outfit-font.outfit-heading {
+    font-size: 40px;
+}
+
+.outfit-font.outfit-sm-heading {
+    font-size: 20px;
+}
+
+.outfit-font.outfit-body {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/*------------------------------IMAGES------------------------------*/
+.background-img {
+    background-image: url(/simple-feature-section/img/Background_image.svg);
+    background-color: #121826;
+}
+
+/*------------------------------CONTAINERS------------------------------*/
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*----------HEADING----------*/
+.container.heading-area {
+    padding-inline: clamp(2rem, 5vw, 10vh);
+    margin-inline: auto;
+    max-width: 90%;
+    margin: clamp(4rem, 9vw, 10vh);
+}
+
+/*----------IMG----------*/
+.container.img-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    width: 1vh; 
+    margin-inline: auto; 
+}
+
+.img-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: min-content; 
+    padding: 1rem;
+    text-align: start;
+    box-shadow: 0px 30px 100px 0px rgba(193, 193, 194, 0.15);
+    border-radius: 1.5rem;
+    background-color: #212936;
+}
+
+.emoji-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.img-widget-body-padding {
+    padding-inline-end: 4vw;
+    padding-bottom: 1rem;
+}
+
+/*----------MEDIA----------*/
+@media (max-width: 1024px) {
+    .container.img-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .heading-container {
+        padding-inline: 2rem;
+        max-width: 100%;
+    }
+
+    .container.img-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
